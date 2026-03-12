@@ -37,28 +37,24 @@ export default function AppRouter() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={
-            <main style={{
-              minHeight: '60vh',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontFamily: 'Poppins, Segoe UI, Arial, sans-serif',
-              color: '#1a2540',
-              marginTop: 32,
-              gap: 48
-            }}>
-              <div style={{ flex: 1, textAlign: 'left', maxWidth: 500 }}>
-                <h1 style={{ fontSize: 54, fontWeight: 800, letterSpacing: 2, marginBottom: 12, color: '#1a2540', textShadow: '0 2px 16px #b0c4de55' }}>Jonah Leinwand</h1>
-                <p style={{ fontSize: 22, marginBottom: 32, color: '#3b4a5a' }}>Welcome to my biomedical and spine-themed personal website!</p>
-                <p style={{ maxWidth: 700, fontSize: 20, color: '#2d3a4b', marginTop: 24 }}>
-                  Explore the About, Projects, and Contact pages to learn more about biomedical research and spine innovation.
-                </p>
+            <section className="home-hero">
+              <div className="hero-inner">
+                <div className="hero-left">
+                  <h1 className="hero-title">Jonah Leinwand</h1>
+                  <p className="hero-sub">Currently researching orthopaedic biomechanics, design, testing, and evaluation of spinal implants through PhD at University of Waterloo</p>
+                </div>
+                <div className="hero-right">
+                  <img
+                    src={
+                      // prefer public/newpicture.jpg if the user uploaded it to public/, otherwise use bundled asset
+                      (typeof window !== 'undefined' && document) ? (('/newpicture.jpg')) : profileImg
+                    }
+                    alt="Profile"
+                    className="hero-photo"
+                  />
+                </div>
               </div>
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-                <img src={profileImg} alt="Profile" style={{ width: 320, height: 320, borderRadius: 24, margin: '32px 0', boxShadow: '0 8px 32px 0 #b0c4de55', objectFit: 'cover', background: '#e0eafc' }} />
-              </div>
-            </main>
+            </section>
           } />
         </Routes>
       </div>
