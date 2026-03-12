@@ -92,32 +92,16 @@ export default function About() {
           <button
             key={s.key}
             onClick={() => setActive(s.key)}
-            style={{
-              width: 160,
-              height: 56,
-              borderRadius: 24,
-              border: active === s.key ? '3px solid #3b4a5a' : '2px solid #b0c4de',
-              background: active === s.key ? 'linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)' : 'rgba(255,255,255,0.7)',
-              color: '#1a2540',
-              fontWeight: 700,
-              fontSize: 18,
-              boxShadow: active === s.key ? '0 4px 24px 0 #b0c4de55' : '0 2px 8px 0 #b0c4de33',
-              cursor: 'pointer',
-              outline: 'none',
-              transition: 'all 0.2s',
-              marginBottom: 0,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              letterSpacing: 0.5
-            }}
+            className={active === s.key ? 'sidebar-button active' : 'sidebar-button'}
           >
             {s.label}
           </button>
         ))}
       </div>
       <div style={{ flex: 1, padding: '48px 32px 48px 0', minWidth: 0 }}>
-        {sections.find((s) => s.key === active)?.content}
+        <div className="fade-in">
+          {sections.find((s) => s.key === active)?.content}
+        </div>
       </div>
     </main>
   );

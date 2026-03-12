@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import profileImg from './assets/JL_square.jpg';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -24,19 +24,11 @@ export default function AppRouter() {
         alignItems: 'center',
         minHeight: 70
       }}>
-        <nav style={{
-          display: 'flex',
-          gap: 40,
-          fontFamily: 'Poppins, Segoe UI, Arial, sans-serif',
-          fontWeight: 600,
-          fontSize: 20,
-          letterSpacing: 1,
-          padding: '0 32px',
-        }}>
-          <Link to="/" style={{ color: '#1a2540', textDecoration: 'none', padding: '18px 24px', borderRadius: 16, transition: 'background 0.2s', margin: 0 }}>Home</Link>
-          <Link to="/about" style={{ color: '#1a2540', textDecoration: 'none', padding: '18px 24px', borderRadius: 16, transition: 'background 0.2s', margin: 0 }}>About</Link>
-          <Link to="/projects" style={{ color: '#1a2540', textDecoration: 'none', padding: '18px 24px', borderRadius: 16, transition: 'background 0.2s', margin: 0 }}>Projects</Link>
-          <Link to="/contact" style={{ color: '#1a2540', textDecoration: 'none', padding: '18px 24px', borderRadius: 16, transition: 'background 0.2s', margin: 0 }}>Contact</Link>
+        <nav className="top-nav">
+          <NavLink to="/" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
+          <NavLink to="/about" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
+          <NavLink to="/projects" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Projects</NavLink>
+          <NavLink to="/contact" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Contact</NavLink>
         </nav>
       </header>
       <div style={{ paddingTop: 100, minHeight: '100vh', background: 'linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%)', fontFamily: 'Poppins, Segoe UI, Arial, sans-serif' }}>

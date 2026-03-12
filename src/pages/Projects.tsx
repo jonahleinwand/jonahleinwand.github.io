@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <main style={{ padding: 32, fontFamily: 'sans-serif' }}>
+    <main className="fade-in" style={{ padding: 32, fontFamily: 'sans-serif' }}>
       <h2>Projects</h2>
       <p>Discover biomedical and spine-related projects, from research studies to innovative medical devices and clinical applications.</p>
 
