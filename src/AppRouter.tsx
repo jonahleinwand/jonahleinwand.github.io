@@ -44,14 +44,7 @@ export default function AppRouter() {
                   <p className="hero-sub">Currently researching orthopaedic biomechanics, design, testing, and evaluation of spinal implants through PhD at University of Waterloo</p>
                 </div>
                 <div className="hero-right">
-                  <img
-                    src={
-                      // prefer public/newpicture.jpg if the user uploaded it to public/, otherwise use bundled asset
-                      (typeof window !== 'undefined' && document) ? (('/newpicture.jpg')) : profileImg
-                    }
-                    alt="Profile"
-                    className="hero-photo"
-                  />
+                  <img src={profileImg} alt="Profile" className="hero-photo" />
                 </div>
               </div>
             </section>

@@ -143,21 +143,23 @@ img {
 .home-hero {
   min-height: calc(100vh - 70px); /* header is ~70px */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* align to top under nav */
   justify-content: center;
-  padding: 40px 20px;
-  overflow: hidden; /* prevent vertical scroll */
+  padding: 24px 20px 40px 20px;
+  overflow: hidden; /* avoid vertical scroll when possible */
 }
 .hero-inner {
   width: 100%;
   max-width: 1200px;
   display: flex;
   gap: 48px;
-  align-items: center;
+  align-items: flex-start;
 }
 .hero-left {
   flex: 1;
   text-align: left;
+  padding-left: 48px; /* push text further left */
+  margin-top: 8px;
 }
 .hero-right {
   flex: 1;
@@ -166,20 +168,20 @@ img {
   justify-content: center;
 }
 .hero-title {
-  font-size: 48px;
-  margin: 8px 0 12px 0;
+  font-size: 44px;
+  margin: 6px 0 10px 0;
   font-weight: 900;
   color: #0f2236;
-  line-height: 1.03;
+  line-height: 1.02;
 }
 .hero-sub {
   font-size: 18px;
   color: #3b4a5a;
-  max-width: 560px;
+  max-width: 620px;
 }
 .hero-photo {
-  width: 420px;
-  height: 420px;
+  width: 360px;
+  height: 360px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 24px 60px rgba(16,32,64,0.12);
