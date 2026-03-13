@@ -78,7 +78,9 @@ export default function About() {
       borderRadius: 24,
       margin: '32px auto 0 auto',
       padding: 0,
-      maxWidth: 1000
+      maxWidth: 1000,
+      position: 'relative',
+      overflow: 'visible'
     }}>
       <div className="sidebar-buttons-container">
         {sections.map((s) => (

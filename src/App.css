@@ -120,8 +120,10 @@ img {
   gap: 20px;
   align-items: center;
   min-width: 190px;
-  margin-left: -220px;
-  margin-right: 32px;
+  position: absolute;
+  left: -240px;
+  top: 0;
+  height: fit-content;
 }
 .sidebar-button {
   width: 160px;
