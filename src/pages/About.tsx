@@ -80,14 +80,7 @@ export default function About() {
       padding: 0,
       maxWidth: 1000
     }}>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 28,
-        padding: '48px 16px 48px 24px',
-        minWidth: 180
-      }}>
+      <div className="sidebar-buttons-container">
         {sections.map((s) => (
           <button
             key={s.key}
